@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Omar Abu Layla | Biomedical Engineer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <div class="identity">
+      <img
+        class="profile"
+        src="https://omarabulayla.github.io/portfolio_old/pics/Omar2.png"
+        alt="Omar Abu Layla"
+      />
+      <div>
+        <h1>Omar Abu Layla</h1>
+        <p class="subtitle">
+          Biomedical Engineer · Research Assistant (Deep Learning &amp; Biosignal Processing)
+        </p>
+      </div>
+    </div>
+
+    <nav class="site-nav" aria-label="Primary">
+      <a href="#about">About</a>
+      <a href="#research">Research</a>
+      <a href="#projects">Projects</a>
+      <a href="#publications">Publications</a>
+      <a href="#contact">Contact</a>
+
+      <a href="YOUR_CV_FILE.pdf" class="cv-nav-btn" download>
+        Download CV
+      </a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+
+  <section id="about">
+    <h2>About</h2>
+    <p>
+      I am a Biomedical Engineer and Research Assistant with a background in biomedical signal
+      processing and machine learning. My work focuses on developing and evaluating feature
+      representations and neural models for cross-subject biosignal classification, including
+      time-frequency and wavelet-based methods alongside recurrent and transformer architectures.
+    </p>
+    <p>
+      I have gained research experience through academic projects and research appointments, and I
+      am currently contributing to manuscripts submitted to IEEE conferences and journals. My
+      broader research interests lie at the intersection of machine learning, biomedical signals,
+      and human–machine interaction, and I am open and adaptable to exploring new research
+      directions and methodologies.
+    </p>
+  </section>
+
+  <section id="research">
+    <h2>Research Interests</h2>
+    <ul class="research-grid">
+      <li>Biomedical signal processing (EMG and physiological signals)</li>
+      <li>Machine learning and deep learning for time-series data</li>
+      <li>Feature representation learning (time-frequency and wavelet methods)</li>
+      <li>Multimodal learning and sensor fusion</li>
+      <li>Assistive and EMG-based / silent-speech technologies</li>
+    </ul>
+  </section>
+
+  <section id="projects">
+    <h2>Projects &amp; Research Work</h2>
+
+    <article class="project">
+      <h3>EMG-Based Speech Recognition</h3>
+
+      <p>
+        This research project investigates sentence-level EMG-based speech recognition using
+        surface electromyography, with an emphasis on cross-subject generalization and robustness.
+        The work integrates feature representation learning and deep learning models to evaluate
+        system performance under realistic inter-subject variability and noise conditions.
+      </p>
+
+      <p>The project involves several interconnected research components:</p>
+
+      <ul>
+        <li>
+          <strong>Feature Representation Learning:</strong>
+          Evaluation of time-frequency and wavelet-based feature extraction methods for EMG-based
+          speech recognition, focusing on robustness and generalization.
+        </li>
+        <li>
+          <strong>Neural Architectures for Biosignal Classification:</strong>
+          Design and assessment of recurrent and transformer-based models for EMG time-series
+          classification, with attention to training stability and cross-subject performance.
+        </li>
+        <li>
+          <strong>Robustness and Noise Analysis:</strong>
+          Experimental analysis of system behavior under noise and subject variability to improve
+          reliability and generalization.
+        </li>
+      </ul>
+
+      <p class="methods">
+        Methods: EMG, MFSC, wavelet scattering, RNNs (GRU/LSTM), Transformers,
+        cross-subject evaluation, noise augmentation
+      </p>
+    </article>
+  </section>
+
+  <section id="publications">
+    <h2>Publications</h2>
+    <p>Manuscripts under review and in preparation for IEEE conferences and journals.</p>
+    <ul>
+      <li>
+        “Sentence-level Speech Recognition Performance for EMG and Audio+EMG Fusion”,
+        IEEE EMBC 2026 (submitted)
+      </li>
+      <li>
+        “A Robust Wavelet Scattering Front-End for Cross-Subject EMG-Based Speech Recognition”,
+        IEEE EMBC 2026 (submitted)
+      </li>
+      <li>
+        “Benchmarking MFSC and Wavelet Scattering Feature Representations for EMG-Based Speech Recognition”,
+        IEEE Transactions journal (in preparation, 2026)
+      </li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <ul class="contact-list">
+      <li>Email: <a href="mailto:O.Abulayla@outlook.com">O.Abulayla@outlook.com</a></li>
+      <li>
+        LinkedIn:
+        <a href="https://www.linkedin.com/in/omar-abulayla/">
+          https://www.linkedin.com/in/omar-abulayla/
+        </a>
+      </li>
+    </ul>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container"></div>
+</footer>
+
+<!-- Smooth scroll with easing + header offset -->
+<script>
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      const targetId = this.getAttribute('href');
+      if (targetId.length <= 1) return;
+
+      const target = document.querySelector(targetId);
+      if (!target) return;
+
+      e.preventDefault();
+
+      const headerOffset = window.innerWidth <= 640 ? 240 : 200;
+      const elementPosition = target.getBoundingClientRect().top;
+      const offsetPosition =
+        elementPosition + window.pageYOffset - headerOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    });
+  });
+</script>
+
+</body>
+</html>
